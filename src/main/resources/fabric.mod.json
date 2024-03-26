@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "aquis_additions",
+	"version": "${version}",
+	"name": "Aqui's Additions",
+	"description": "Aqui's Additions to Minecraft",
+	"authors": [
+		"Ethan Plant"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/EthanPlant/AquisAdditions"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.aqui.additions.AquisAdditions"
+		],
+		"client": [
+			"com.aqui.additions.AquisAdditionsClient"
+		],
+		"fabric-datagen": [
+			"com.aqui.additions.AquisAdditionsDataGenerator"
+		]
+	},
+	"mixins": [
+		"aquis_additions.mixins.json",
+		{
+			"config": "aquis_additions.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
